@@ -38,10 +38,18 @@ There is a fantastic and free API service that will provide realistic-looking bu
 
 The Node script to load this data can be found in the [load_people folder](./load_people) in this repository. By default it loads 10 people.
 
-1.
-1. Open a command window.
-1. cd load_people
-1. node load_people.js
+1. Go to your Firebase Console.
+2. Go Project overview - project settings
+3. Choose the Service Accounts tab
+4. Node.js should be chosen already. If not, select it. 
+5. Click "Generate new private key" button (lower right).
+6. It'll offer to save a file. Save it in your load_people folder. Name it `serviceAccountKey.json`
+7. Open a command window.
+8. `cd load_people`
+9. `node load_people.js`
+10. Check back in your Firestore DB browser and you should see 10 new people. 
+
+Run it multiple times to add more people.
 
 ## Creating the Flutter project
 Coming soon!
