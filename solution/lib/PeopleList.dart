@@ -7,7 +7,8 @@ class PeopleList extends StatefulWidget {
 }
 
 class _PeopleListState extends State<PeopleList> {
-  final String _placeholderImage = 'http://sunfieldfarm.org/wp-content/uploads/2014/02/profile-placeholder.png';
+  final String _placeholderImage =
+      'http://sunfieldfarm.org/wp-content/uploads/2014/02/profile-placeholder.png';
 
   @override
   Widget build(BuildContext context) {
@@ -35,10 +36,13 @@ class _PeopleListState extends State<PeopleList> {
               TextStyle(color: Colors.white, fontWeight: FontWeight.bold);
           List<Widget> tiles = snapshot.data.documents
               .map((person) => GestureDetector(
-                    onTap: () => Navigator.pushNamed(context, '/upsert', arguments:person),
+                    onTap: () => Navigator.pushNamed(context, '/upsert',
+                        arguments: person),
                     child: Stack(children: [
                       Image.network(
-                        (person['picture']==null) ? _placeholderImage : person['picture']['large'],
+                        (person['picture'] == null)
+                            ? _placeholderImage
+                            : person['picture']['large'],
                         width: 300,
                         fit: BoxFit.cover,
                       ),
@@ -71,7 +75,7 @@ class _PeopleListState extends State<PeopleList> {
         });
   }
 
-  Stream getPeople() {
+  Stream<QuerySnapshot> getPeople() {
     return Firestore.instance.collection('people').limit(100).snapshots();
   }
 
