@@ -16,7 +16,7 @@ google-services.json
 .svn/
 
 # For the node script(s)
-node_modules
+**/node_modules
 
 # IntelliJ related
 *.iml
