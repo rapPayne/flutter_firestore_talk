@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 class PeopleUpsert extends StatefulWidget {
   @override
@@ -8,7 +7,8 @@ class PeopleUpsert extends StatefulWidget {
 
 class _PeopleUpsertState extends State<PeopleUpsert> {
   GlobalKey<FormState> _key = GlobalKey<FormState>();
-  DocumentSnapshot _person;
+  //DocumentSnapshot _person;
+  dynamic _person;
   dynamic _localPerson;
 
   @override
@@ -47,22 +47,22 @@ class _PeopleUpsertState extends State<PeopleUpsert> {
           children: <Widget>[
             TextFormField(
               decoration: InputDecoration(labelText: 'First name'),
-              initialValue: _person['name']['first'],
+              initialValue: _localPerson['name']['first'],
               onChanged: (val) => _localPerson['name']['first'] = val,
             ),
             TextFormField(
               decoration: InputDecoration(labelText: 'Last name'),
-              initialValue: _person['name']['last'],
+              initialValue: _localPerson['name']['last'],
               onChanged: (val) => _localPerson['name']['last'] = val,
             ),
             TextFormField(
               decoration: InputDecoration(labelText: 'cell'),
-              initialValue: _person['cell'],
+              initialValue: _localPerson['cell'],
               onChanged: (val) => _localPerson['cell'] = val,
             ),
             TextFormField(
               decoration: InputDecoration(labelText: 'email'),
-              initialValue: _person['email'],
+              initialValue: _localPerson['email'],
               onChanged: (val) => _localPerson['email'] = val,
             ),
           ],

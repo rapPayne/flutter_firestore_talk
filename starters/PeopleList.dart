@@ -6,6 +6,8 @@ class PeopleList extends StatefulWidget {
 }
 
 class _PeopleListState extends State<PeopleList> {
+  final String _placeholderImage = 'http://sunfieldfarm.org/wp-content/uploads/2014/02/profile-placeholder.png';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +37,7 @@ class _PeopleListState extends State<PeopleList> {
                     onTap: () => Navigator.pushNamed(context, '/upsert', arguments:person),
                     child: Stack(children: [
                       Image.network(
-                        person['picture']['large'],
+                        (person['picture']==null) ? _placeholderImage : person['picture']['large'],
                         width: 300,
                         fit: BoxFit.cover,
                       ),
