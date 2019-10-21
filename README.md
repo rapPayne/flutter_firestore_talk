@@ -157,7 +157,6 @@ savePerson(personMap) {
 }
 ```
 
-
 ## Connecting the iOS app to Firestore
 This is easier than Android except that you must use Xcode. So if you don't have a Mac, you won't be able to do it. (Thanks, Apple).
 1. Open your Firebase console and go to you project's main page.
@@ -178,8 +177,9 @@ Your app should run just great in an iOS simulator and on iOS devices.
 - Chapter 12 of my book: [https://www.amazon.com/dp/1484251806/](https://www.amazon.com/dp/1484251806/)
 - Google's instructions for adding anything Firebase to your Flutter app: [https://firebase.google.com/docs/flutter/setup](https://firebase.google.com/docs/flutter/setup)
 
-#Prerequisites
+# Prerequisites
 To run these labs you'll need ...
-1. An IDE like [VS Code]([https://code.visualstudio.com/](https://code.visualstudio.com/)) or [Android Studio]([https://developer.android.com/studio/](https://developer.android.com/studio/)).
-2. 
-> Written with [StackEdit](https://stackedit.io/).
+1. [Flutter dev tools](https://flutter.io/get-started/install/) installed
+2. An IDE like [VS Code]([https://code.visualstudio.com/](https://code.visualstudio.com/)) or [Android Studio]([https://developer.android.com/studio/](https://developer.android.com/studio/))
+3. 
+> This README written with [StackEdit](https://stackedit.io/).
