@@ -8,6 +8,7 @@ admin.initializeApp({
 });
 
 let db = admin.firestore();
+const firebaseProjectId = db.projectId;
 loadRandomPeople(10);
 
 async function loadRandomPeople(numberOfPeople=10) {
