@@ -8,12 +8,9 @@ admin.initializeApp({
 });
 
 let db = admin.firestore();
-const firebaseProjectId = 'learning-flutter-e3d0a';
-
-loadRandomPeople(5);
+loadRandomPeople(10);
 
 async function loadRandomPeople(numberOfPeople=10) {
- let randomPeople;
  const url = `http://randomuser.me/api?results=${numberOfPeople}`;
  fetch(url)
   .then(res => res.json())
