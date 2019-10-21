@@ -1,0 +1,21 @@
+{
+  "name": "load_people",
+  "version": "0.0.1",
+  "description": "Reads from an HTTP API and writes to a Firebase Firestore database",
+  "main": "load_people.js",
+  "scripts": {
+    "start": "node load_people"
+  },
+  "keywords": [
+    "Firebase",
+    "firestore",
+    "node",
+    "javascript"
+  ],
+  "author": "Rap Payne (@RapPayne)",
+  "license": "ISC",
+  "dependencies": {
+    "firebase-admin": "^8.6.0",
+    "node-fetch": "^2.6.0"
+  }
+}
