@@ -9,7 +9,8 @@ admin.initializeApp({
 
 let db = admin.firestore();
 const firebaseProjectId = db.projectId;
-loadRandomPeople(10);
+const { argv } = process;
+loadRandomPeople(argv[2]);
 
 async function loadRandomPeople(numberOfPeople=10) {
  const url = `http://randomuser.me/api?results=${numberOfPeople}`;
@@ -28,5 +29,5 @@ function addPersonToFirestore(person) {
  const insertUrl = `https://firestore.googleapis.com/v1/projects/${firebaseProjectId}/databases/(default)/documents/people`;
  db.collection('people')
  .add(person)
- .then(ref => console.log(`Added person ${ref} - ${person.name.first} ${person.name.last} `));
+ .then(ref => console.log(`Added person ${ref.id} - ${person.name.first} ${person.name.last} `));
 }

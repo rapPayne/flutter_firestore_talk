@@ -10,8 +10,8 @@ class PeopleMaintenance extends StatelessWidget {
     return MaterialApp(
       title: "People Maintenance",
       routes: {
-        "/": (ctx) => PeopleList(),
-        "/upsert": (ctx) => PeopleUpsert(),
+        "/": (_) => PeopleList(),
+        "/upsert": (_) => PeopleUpsert(),
       }
     );
   }
