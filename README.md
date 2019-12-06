@@ -166,13 +166,14 @@ This is easier than Android except that you must use Xcode. So if you don't have
 2. Click "Add app" but this time choose iOS.
 3. Add the iOS bundle name which should be the same as the app ID (like com.yourcompany.yourproject).
 4. Download GoogleService-Info.plist. Save it anywhere in your project. Just remember where it is.
-5. Open Xcode on your Mac.
-6. Open the iOS project folder as an Xcode project.
-7. Drag GoogleService-Info.plist to Runner/Runner folder in Xcode.
-8. Hit the Finish button.
-9. Click the top-level Runner folder in Xcode. Properties will appear.
-10. Change the Bundle ID to match the app ID from above.
-11. Close Xcode
+(Note that there are several more step in the wizard. Ignore them.)
+6. Open Xcode on your Mac.
+7. Open the iOS project folder as an Xcode project.
+8. Drag GoogleService-Info.plist to Runner/Runner folder in Xcode.
+9. Hit the Finish button.
+10. Click the top-level Runner folder in Xcode. Properties will appear.
+11. Change the Bundle ID to match the app ID from above.
+12. Close Xcode
 
 Your app should run just great in an iOS simulator and on iOS devices.
 
