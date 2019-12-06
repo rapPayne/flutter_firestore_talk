@@ -11,9 +11,7 @@ class _PeopleListState extends State<PeopleList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('People List'),
-      ),
+      appBar: AppBar(title: Text('People List'),),
       body: body,
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
@@ -33,7 +31,7 @@ class _PeopleListState extends State<PeopleList> {
           TextStyle style =
               TextStyle(color: Colors.white, fontWeight: FontWeight.bold);
           List<Widget> tiles = snapshot.data.documents
-              .map((person) => GestureDetector(
+              .map<Widget>((person) => GestureDetector(
                     onTap: () => Navigator.pushNamed(context, '/upsert', arguments:person),
                     child: Stack(children: [
                       Image.network(

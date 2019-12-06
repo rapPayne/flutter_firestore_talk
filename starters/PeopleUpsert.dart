@@ -11,14 +11,15 @@ class _PeopleUpsertState extends State<PeopleUpsert> {
   dynamic _person;
   dynamic _localPerson;
 
+  // didChangeDependencies() is a lifecycle event that is called
+  // by Flutter after the state is loaded but before build() is
+  // called. We needed it here because we're using 'context' and
+  // context doesn't exist until *after* initState is finished.
   @override
   void didChangeDependencies() {
     _person = ModalRoute.of(context).settings.arguments;
     if (_localPerson == null) {
-      if (_person == null)
-        _localPerson = {'name': {}, "email": '', 'cell': ''};
-      else
-        _localPerson = _person.data;
+      _localPerson = _person?.data ?? {'name': {}, "email": '', 'cell': ''};
     }
     super.didChangeDependencies();
   }
