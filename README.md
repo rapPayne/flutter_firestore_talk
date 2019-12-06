@@ -363,6 +363,5 @@ To run these labs you'll need ...
 
 2. An IDE like [VS Code]([https://code.visualstudio.com/](https://code.visualstudio.com/)) or [Android Studio]([https://developer.android.com/studio/](https://developer.android.com/studio/))
 
-3.
 
 > This README written with [StackEdit](https://stackedit.io/).
